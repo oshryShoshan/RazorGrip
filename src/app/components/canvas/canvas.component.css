@@ -1,0 +1,9 @@
+.canvasWrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.canvasWrapper .viewComponent {
+  height: 100%;
+  width: 100%;
+}

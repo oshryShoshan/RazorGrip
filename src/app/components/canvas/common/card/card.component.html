@@ -1,0 +1,36 @@
+<div class="cardWrapper">
+  <div class="card" *ngIf="cardModel">
+    <div class="leftDetails">
+      <div class="cardTitle" title="{{cardModel.title}}">
+        <span class="label">{{labels.title}}:</span>
+        <span class="content">{{cardModel.title}}</span>
+      </div>
+
+      <div class="cardDate" title="{{cardModel.date}}">
+        <span class="label">{{labels.dateTaken}}:</span>
+        <span>{{cardModel.date | date:'medium'}} </span>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="CardImage">
+        <img src="{{cardModel.image}}">
+      </div>
+
+      <div class="customButton"
+           *ngIf="buttonLabel"
+           (click)="onButtonClicked()">
+        <span>{{buttonLabel}}</span>
+      </div>
+    </div>
+
+    <div class="rightDetails">
+      <span class="label">{{labels.description}}:</span>
+      <iframe class="cardDescription" srcdoc="{{cardModel.description}}"></iframe>
+    </div>
+  </div>
+
+  <div class="errorCardModel" *ngIf="!cardModel">
+    <h1>{{labels.errorMsg}}</h1>
+  </div>
+</div>

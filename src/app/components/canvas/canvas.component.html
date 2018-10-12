@@ -1,0 +1,14 @@
+<div class="canvasWrapper"
+     [ngSwitch]="currentView">
+
+  <div class="viewComponent"
+       *ngSwitchCase="_EAction.navigateHome">
+    <app-home></app-home>
+  </div>
+
+  <div class="viewComponent"
+       *ngSwitchCase="_EAction.navigateHistory">
+    <app-history></app-history>
+  </div>
+
+</div>

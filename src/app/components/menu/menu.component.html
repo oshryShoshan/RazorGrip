@@ -1,0 +1,6 @@
+<div class="menuWrapper">
+    <div class="actionsSection"
+    *ngFor="let action of actions" (click)="onActionClicked(action)">
+      <span>{{action.actionTitle}}</span>
+    </div>
+</div>

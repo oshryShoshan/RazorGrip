@@ -1,0 +1,20 @@
+<div class="historyWrapper">
+
+  <div class="gallery"
+       [ngStyle]="{'grid-template-rows': gridTemplateRows}">
+
+    <div class="historyItem"
+         *ngFor="let card of historyCards"
+         (click)="onGalleryItemClicked(card)">
+      <img src="{{card.image}}" width="60" height="60">
+    </div>
+
+  </div>
+
+  <div class="card">
+    <app-card *ngIf="card"
+              [cardModel]="card">
+    </app-card>
+  </div>
+
+</div>

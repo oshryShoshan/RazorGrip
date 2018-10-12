@@ -1,0 +1,26 @@
+.menuWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.menuWrapper .actionsSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 100%;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  background-color: rgb(247, 247, 247);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.menuWrapper .actionsSection:hover {
+  background-color: rgba(180,214,234,0.92);
+}
+
